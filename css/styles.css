@@ -45,20 +45,12 @@ ul {
 }
 
 .inner-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   max-width: 100%;
 }
 
 .nav {
   display: flex;
-}
-
-/* Фактична ширина макету 1128рх, ми до контейнера задаємо лівий та правий падінг  по 15рх(це часина gap), це внутрішні відступи, і якщо додати 1128+15рх+15рх - це виходить  загальна ширина 1158рх, яку ми прописуємо для контейнера.Макет 1440рх, це ширина вюпорта, він може змінюватись, щоб ваш контент був по центру , вам слід на контейнер задати маржин лівий і правий авто) */
-
-/* Для секцій використовується один клас .section,в якому задані відповідні падінги, що відсувають контент всередину секції. */
-
-.nav-logo {
+  align-items: center;
 }
 
 .nav-logo {
@@ -69,12 +61,7 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   display: flex;
-}
-
-.nav-pagination {
-  display: flex;
-  gap: 40px;
-  margin-left: 76px;
+  margin-right: 76px;
 }
 
 .nav-logo-blue,
@@ -82,13 +69,57 @@ ul {
   color: var(--blue-color);
 }
 
+.link {
+  text-decoration: none;
+}
+
+.nav-logo-dark,
+.pagination-item.link,
+.title-two,
+.title-three,
+.title-portfolio {
+  color: var(--secondary-dark-color);
+}
+
+.pagination-menu {
+  display: flex;
+  gap: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .list {
   display: flex;
   list-style: none;
 }
 
-.link {
-  text-decoration: none;
+.pagination-item.link,
+.contacts-item,
+.title-one,
+.title-two,
+.title-three,
+.title-portfolio,
+.text {
+  letter-spacing: 0.02em;
+}
+
+.pagination-item.link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.pagination-item.link:hover,
+.pagination-item.link:focus,
+.contacts-item.link:hover,
+.contacts-item.link:focus {
+  color: var(--active-link-color);
+}
+
+.nav-contacts {
+  font-style: normal;
+  display: flex;
+  align-items: center;
 }
 
 .contacts-menu {
@@ -100,44 +131,15 @@ ul {
   color: var(--primary-dark-color);
 }
 
-.nav-logo-dark,
-.nav-item.link,
-.title-two,
-.title-three,
-.title-portfolio {
-  color: var(--secondary-dark-color);
-}
-
-.nav-item.link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.nav-item.link,
-.contacts-item,
-.title-one,
-.title-two,
-.title-three,
-.title-portfolio,
-.text {
-  letter-spacing: 0.02em;
-}
-.nav-item.link:hover,
-.nav-item.link:focus,
-.contacts-item.link:hover,
-.contacts-item.link:focus {
-  color: var(--active-link-color);
-}
-
-.nav-contacts {
-  font-style: normal;
-}
-
 .section {
   display: flex;
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.section-one {
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .inner-one,
@@ -149,10 +151,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 496px;
   padding: 0;
-  padding-top: 188px;
-  padding-bottom: 188px;
 }
 
 .title-one {
@@ -161,6 +160,7 @@ ul {
   font-size: 56px;
   line-height: 107%;
   text-align: center;
+  max-width: 496px;
 }
 
 .button {
@@ -180,6 +180,8 @@ ul {
   padding: 16px 32px;
   margin-top: 48px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  min-width: 169px;
+  cursor: pointer;
 }
 
 .button.order-service:hover,
@@ -212,7 +214,13 @@ ul {
   overflow: hidden;
 }
 
-.row .text {
+.advantages-menu,
+.proposals-menu,
+.team-cards-menu {
+  gap: 24px;
+}
+
+.advantages-menu .text {
   max-width: 264px;
   margin-top: 8px;
 }
@@ -236,11 +244,6 @@ ul {
 
 .inner-four {
   background-color: var(--bg-color-two);
-}
-
-.proposals-menu,
-.team-cards-menu {
-  gap: 24px;
 }
 
 .team-card {
@@ -276,9 +279,13 @@ ul {
   max-width: 100%;
 }
 
+.footer-inner .nav-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .footer-inner .text {
   max-width: 264px;
-  margin-top: 17.5px;
 }
 
 .portfolio {
@@ -288,7 +295,7 @@ ul {
 .filter-menu {
   gap: 24px;
   justify-content: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .filter {
@@ -302,7 +309,7 @@ ul {
   color: var(--primary-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-color: var(--active-link-color);
+  border: 1px solid transparent;
 }
 
 .work-cards-menu {
@@ -325,7 +332,6 @@ ul {
   border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: var(--border-light-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
+  border-top: none;
 }
