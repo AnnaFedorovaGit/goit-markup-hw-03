@@ -29,6 +29,7 @@ ul {
 
 .header {
   border-bottom: 1px solid var(--border-light-color);
+  padding: 24px 0;
 }
 
 .container {
@@ -51,7 +52,6 @@ ul {
 .nav {
   display: flex;
   align-items: center;
-  /* padding: 24px 0; */
 }
 
 .nav-logo {
@@ -89,10 +89,6 @@ ul {
 .list {
   display: flex;
   list-style: none;
-}
-
-.pag-item {
-  padding: 24px 0;
 }
 
 .pagination-item.link,
