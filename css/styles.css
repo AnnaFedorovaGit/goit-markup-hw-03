@@ -51,6 +51,7 @@ ul {
 .nav {
   display: flex;
   align-items: center;
+  /* padding: 24px 0; */
 }
 
 .nav-logo {
@@ -83,12 +84,15 @@ ul {
 
 .pagination-menu {
   gap: 40px;
-  padding: 24px 0;
 }
 
 .list {
   display: flex;
   list-style: none;
+}
+
+.pag-item {
+  padding: 24px 0;
 }
 
 .pagination-item.link,
