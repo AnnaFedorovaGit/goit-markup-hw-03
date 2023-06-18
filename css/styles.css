@@ -28,7 +28,6 @@ ul {
 }
 
 .header {
-  display: flex;
   border-bottom: 1px solid var(--border-light-color);
 }
 
@@ -46,16 +45,18 @@ ul {
 }
 
 .inner-header {
-  margin: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  max-width: 100%;
 }
 
 .nav {
   display: flex;
 }
 
-/*  До хідден заголовків використовується паттерня десь в обговоренні дз я скидував */
-
 /* Фактична ширина макету 1128рх, ми до контейнера задаємо лівий та правий падінг  по 15рх(це часина gap), це внутрішні відступи, і якщо додати 1128+15рх+15рх - це виходить  загальна ширина 1158рх, яку ми прописуємо для контейнера.Макет 1440рх, це ширина вюпорта, він може змінюватись, щоб ваш контент був по центру , вам слід на контейнер задати маржин лівий і правий авто) */
+
+/* Для секцій використовується один клас .section,в якому задані відповідні падінги, що відсувають контент всередину секції. */
 
 .nav-logo {
 }
@@ -150,7 +151,8 @@ ul {
   align-items: center;
   max-width: 496px;
   padding: 0;
-  margin: 188px auto;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .title-one {
@@ -188,9 +190,6 @@ ul {
   background-color: var(--active-link-color);
 }
 
-.box-advantages {
-}
-
 .title-two {
   font-weight: 700;
   font-size: 36px;
@@ -200,6 +199,24 @@ ul {
   margin-bottom: 72px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.row .text {
+  max-width: 264px;
+  margin-top: 8px;
+}
+
 .title-three,
 .title-portfolio {
   font-weight: 500;
@@ -207,6 +224,10 @@ ul {
   line-height: 120%;
   text-transform: capitalize;
   margin-bottom: 8px;
+}
+
+.proposals {
+  padding-top: 0;
 }
 
 .image-border {
@@ -251,15 +272,22 @@ ul {
   padding-bottom: 100px;
 }
 
+.footer-inner {
+  max-width: 100%;
+}
+
 .footer-inner .text {
   max-width: 264px;
   margin-top: 17.5px;
 }
 
+.portfolio {
+  padding-top: 96px;
+}
+
 .filter-menu {
   gap: 24px;
   justify-content: center;
-  padding-top: 96px;
   padding-bottom: 72px;
 }
 
