@@ -64,6 +64,13 @@ ul {
   margin-right: 76px;
 }
 
+.nav .nav-logo,
+.pagination-item,
+.contacts-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .nav-logo-blue,
 .filter {
   color: var(--blue-color);
@@ -88,11 +95,6 @@ ul {
 .list {
   display: flex;
   list-style: none;
-}
-
-.pag-item {
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .pagination-item.link,
