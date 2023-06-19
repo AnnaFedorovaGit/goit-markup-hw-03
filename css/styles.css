@@ -29,7 +29,6 @@ ul {
 
 .header {
   border-bottom: 1px solid var(--border-light-color);
-  padding: 24px 0 24px;
 }
 
 .container {
@@ -89,6 +88,11 @@ ul {
 .list {
   display: flex;
   list-style: none;
+}
+
+.pag-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .pagination-item.link,
