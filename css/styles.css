@@ -29,7 +29,7 @@ ul {
 
 .header {
   border-bottom: 1px solid var(--border-light-color);
-  padding: 24px 0;
+  padding: 24px 0 24px;
 }
 
 .container {
